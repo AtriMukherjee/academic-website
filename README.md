@@ -1,1 +1,1 @@
-# academic-website
+# personal-blog
