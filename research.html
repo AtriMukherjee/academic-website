@@ -91,6 +91,8 @@ section + section { margin-top: 52px; }
 .portrait { margin: 0; }
 .portrait img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: 78% 30%; }
 .portrait figcaption { margin-top: 6px; font-size: 12px; color: var(--muted); }
+.stack { display: grid; gap: 36px; min-width: 0; }
+.portrait.art img { aspect-ratio: auto; object-fit: initial; }
 .home .lead { margin-top: 18px; }
 
 .box { max-width: 620px; margin-top: 48px; padding: 14px 16px 16px; background: var(--tint); border-top: 3px solid var(--ink); }
@@ -114,7 +116,7 @@ section + section { margin-top: 52px; }
   main { padding-left: 0; }
   .meta { margin-top: 44px; padding: 18px 0 0; border-right: 0; border-top: 1px solid var(--ink); }
   .home { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-  .portrait { max-width: 260px; }
+  .stack { max-width: 260px; gap: 24px; }
   .cols { columns: 1; }
 }
 @media (max-width: 560px) {
