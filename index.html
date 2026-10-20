@@ -137,7 +137,8 @@ section + section { margin-top: 52px; }
   main { padding-left: 0; }
   .meta { margin-top: 44px; padding: 18px 0 0; border-right: 0; border-top: 1px solid var(--ink); }
   .home { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-  .stack { max-width: 260px; gap: 24px; }
+  .stack { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; max-width: 520px; }
+  .portrait img, .portrait.art img { aspect-ratio: 4 / 5; object-fit: cover; }
   .cols { columns: 1; }
 }
 @media (max-width: 560px) {
