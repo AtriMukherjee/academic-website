@@ -16,11 +16,13 @@
 <style>
 /* Layout: a Swiss magazine spread. Narrow left column of small notes with a hairline rule, wide right column with a very large headline; one typeface (Helvetica), black on white. */
 :root {
-  --paper: #ffffff;
-  --ink: #111111;
-  --muted: #686868;
-  --rule: #d6d6d6;
-  --tint: #f2f2f2;
+  --paper: #f2ede3;
+  --ink: #2a2623;
+  --muted: #6b625a;
+  --rule: #d3cabb;
+  --tint: #ddd5c8;
+  --accent: #4b2d5c;
+  --ochre: #d99b2b;
   --font: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", "Nimbus Sans", sans-serif;
   color-scheme: light;
   padding-top: env(safe-area-inset-top, 0px);
@@ -41,8 +43,9 @@ body {
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
-a { color: var(--ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
-a:hover { color: var(--muted); }
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--ink); }
+.brand, .nav a { color: var(--ink); }
 a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 
 .sheet { max-width: 1180px; margin: 0 auto; }
@@ -53,8 +56,8 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .folio { font-size: 1.6rem; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
 .nav { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 12px; font-size: 14px; }
 .nav a { text-decoration: none; padding-bottom: 2px; border-bottom: 2px solid transparent; }
-.nav a:hover { border-bottom-color: var(--muted); color: var(--ink); }
-.nav a[aria-current="page"] { font-weight: 700; border-bottom-color: var(--ink); }
+.nav a:hover { border-bottom-color: var(--ochre); color: var(--ink); }
+.nav a[aria-current="page"] { font-weight: 700; border-bottom-color: var(--accent); }
 
 /* spread */
 .spread { display: grid; grid-template-columns: 200px minmax(0, 1fr); grid-template-areas: "meta main"; }
@@ -95,7 +98,7 @@ section + section { margin-top: 52px; }
 .portrait.art img { aspect-ratio: auto; object-fit: initial; }
 .home .lead { margin-top: 18px; }
 
-.box { max-width: 620px; margin-top: 48px; padding: 14px 16px 16px; background: var(--tint); border-top: 3px solid var(--ink); }
+.box { max-width: 620px; margin-top: 48px; padding: 14px 16px 16px; background: var(--tint); border-top: 3px solid var(--accent); }
 .box .t { display: block; margin-bottom: 6px; font-size: 12.5px; font-weight: 700; }
 .box .what { margin: 0 0 .4em; font-weight: 700; font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; }
 .box p { margin: 0 0 .5em; }
